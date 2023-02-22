@@ -297,6 +297,7 @@ Assume $A &lt B$ and $B &lt 2A$ <br>
 
 same as **CASE AAAA**.
 
+---
 
 **Case AABC**, $A>0$, $B>0$, $C>0$, $A\neq B \neq C$ <br>
 
