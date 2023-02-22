@@ -224,6 +224,7 @@ Assume $A>B$. <br>
 
 If $\vert A-2B\vert = B$ and $A   > 2B$ => $A=3B$ => 7. <br>
 If $\vert A-2B\vert = B$ and $A &lt 2B$ => $A=B$ => impossible. <br>
+
 Assume $A>B$ and $A>2B$ <br>
 
 |   |   |   |   |
@@ -240,9 +241,8 @@ Assume $A>B$ and $A &lt 2B$ <br>
 | $A$  | $B$ | $-A+2B$  | $B$ |
 | $A-B$  | $A+B$ | $A+3B$  | $A-B$ |
 
-same as **CASE AABB**. 
+same as **CASE AABB**. <br>
 
-<br>
 Assume $A &lt B$. <br>
 
 |   |   |   |   |
