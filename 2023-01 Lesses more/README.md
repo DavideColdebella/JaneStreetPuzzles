@@ -17,9 +17,10 @@ where the game ends (pictured above). So f(10, 6, 3, 1) = 7. And trivially, f(0,
 <br>
 Consider the set S = {(a, b, c, d) | a, b, c, and d are all integers with 0 <= a, b, c, d <= 10,000,000}. Let M be the maximum value f obtains on S. Find (a, b, c, d) in S with minimum sum (a+b+c+d) where f(a, b, c, d) = M. Enter your answer as a semicolon-separated list, 10;6;3;1 for example.
 
-## SOLUTION
+# SOLUTION
 Jane Street's official solution is elegant and concise and [can be found here](https://www.janestreet.com/puzzles/lesses-more-solution/). Here I'd like to offer a geometric interpretation.
 
+## Preliminaries
 ### 1 - the constrains
 The solution of the problem is a tuple of four elements $(A, B, C, D)$ where each element in the set of natural numbers {0, 1, .., 10<sup>7</sup>}. This means that the tuple solving the problem belongs to a set of size 10<sup>28</sup> and consequently a brute-force solution seems unlikely. <br>
 
@@ -67,9 +68,18 @@ elements even after many iterations. <br>
 Given a tuple $(A, B, C, D)$ with $A,B,C,D>0$ then the $(0, \vert A-B\vert, \vert B-C\vert, \vert D-A\vert)$ takes the same number of steps to reach $(0, 0, 0, 0)$. The state space can be restricted to the set of all tuples of the kind $(0, A, B, C)$.
 
 ### 4 - rotation invariance
-Given a tuple $(A, B, C, D)$ then $(B, C, D, A)$, $(C, D, A, B)$ and $(D, A, B, C)$ have the same solution.  
+Given a tuple $(A, B, C, D)$ then $(B, C, D, A)$, $(C, D, A, B)$ and $(D, A, B, C)$ have the same solution.
 
-### 5 - preserving order
+## The general **CASE 0ABC**
+Consider the tuple $(A^1, B^1, C^1, D^1)$. Let $A^1>0$, $B^1>0$, $C^1>0$, $D^1>0$, $A^1\neq B^1 \neq C^1 \neq D^1$. Without loss of generality let $A^1$ be the minimum of the four elements. Then $(0, A, B, C)$ (with A=B^1-A^1, ecc) takes the same number of steps to reach $(0, 0, 0, 0)$. <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $0$ | $A$ | $B$ | $C$ |
+| $A$ | $\vert B-A \vert$ | $\vert C-B \vert$ | $C$ |
+
+1. + $A>B$
+1. - $A &lt B$
 
 
 
@@ -268,4 +278,11 @@ Assume $A &lt B$ and $B &lt 2A$ <br>
 same as **CASE AAAA**.
 
 
-**Case AABC** <br>
+**Case AABC**, $A>0$, $B>0$, $C>0$, $A\neq B \neq C$ <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $A$  | $A$ | $B$  | $C$ |
+| $0$  | $\vert A - B \vert $  | $\vert B - C \vert$   | $\vert A - C \vert$ |
+
+same as the general **CASE 0ABC**.
