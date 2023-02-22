@@ -136,8 +136,49 @@ If $\vert \vert A-B\vert -A \vert = 0$ => $(0, 0, 0, 0)$. <br>
 same as **CASE AABB**. <br>
 
 **Case AAB0**, $A>0$, $B>0$, $A\neq B$ <br>
+|   |   |   |   |
+|---|---|---|---|
+| $A$ | $A$ | $B$ | $0$ |
+| $0$ | $\vert A-B\vert$ | $B$ | $A$ |
 
+If $\vert A-B\vert = A$ and $A   > B$ => B=0 => impossible. <br>
+If $\vert A-B\vert = A$ and $A &lt B$ => $B=2A$ => 4. <br>
+If $\vert A-B\vert = B$ and $A   > B$ => $A=2B$ => 5. <br>
+If $\vert A-B\vert = B$ and $A &lt B$ => $A=0$ => impossible. <br>
+<br>
+Assume $A>B$. <br>
+|   |   |   |   |
+|---|---|---|---|
+| $0$ | $A-B$ | $B$ | $A$ |
+| $A-B$ | $\vert A - 2B \vert$ | $A-B$  | $A$ |
 
+If $\vert A-2B\vert =   A$ and $A   > 2B$ => $B=0$ => impossible. <br>
+If $\vert A-2B\vert =   A$ and $A &lt 2B$ => $A=B$ => impossible. <br>
+If $\vert A-2B\vert = A-B$ and $A   > 2B$ => $B=0$ => impossible. <br>
+If $\vert A-2B\vert = A-B$ and $A &lt 2B$ => $A=3B/2$ => 7. <br>
+Assume $A>B$, $A-2B>0$ <br>
+|   |   |   |   |
+|---|---|---|---|
+| $A-B$ | $A-2B$ | $A-B$ | $A$ |
+| $B$ | $B$ | $B$ | $B$ |
+
+Assume $A>B$, $A-2B &lt 0$ <br>
+|   |   |   |   |
+|---|---|---|---|
+| $A-B$ | $-A+2B$ | $A-B$ | $A$ |
+| $\vert 2A - 3B\vert$ | $\vert 2A - 3B\vert$ | $B$ | $B$ |
+
+same as **CASE AABB** since $\vert 2A-3B \vert \neq B$ always.
+
+<br>
+Assume $A &lt B$. <br>
+|   |   |   |   |
+|---|---|---|---|
+| $0$ | $-A+B$ | $B$ | $A$ |
+| $-A+B$  | $A$ | $-A+B$  | $A$ |
+
+same as **CASE ABAB** (it is guaranteed that $A \neq B $) and, if
+$\vert 2A -B\vert = 0$, it is the same as one of the case discussed above. <br>
 
 **Case 00AB** <br>
 **Case AABC** <br>
