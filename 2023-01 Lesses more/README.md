@@ -101,7 +101,8 @@ Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes
 | $A$ | $0$ | $A$ | $0$ |
 | $A$ | $A$ | $A$ | $A$ |
 | $0$ | $0$ | $0$ | $0$ |
-**Case ABAB**, $A>0$, $B>0$, $A\vneq B$<br>
+
+**Case ABAB**, $A>0$, $B>0$, $A\neq B$<br>
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $B$ | $A$ | $B$ |
