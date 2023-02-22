@@ -41,9 +41,9 @@ Trying a for loop iterating over each possible value for each element in the tup
 
 ### Second step: some easy cases
 It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A)
-|Case AAAA|
-|---------|
-| A A A A |
-| 0 0 0 0 |
+|Case AAAA------|
+|---------------|
+| A | A | A | A |
+| 0 | 0 | 0 | 0 |
 
 # APPENDIX
