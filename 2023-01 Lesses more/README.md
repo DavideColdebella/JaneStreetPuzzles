@@ -78,19 +78,33 @@ Consider the tuple $(A^1, B^1, C^1, D^1)$. Let $A^1>0$, $B^1>0$, $C^1>0$, $D^1>0
 | $0$ | $A$ | $B$ | $C$ |
 | $A$ | $\vert B-A \vert$ | $\vert C-B \vert$ | $C$ |
 
-(1+) $A>B$
-(1+)(2+)
-(1+)(2+)(3+)
-(1+)(2+)(3+)(4+)
-(1+)(2-)
+__**(1+)**__ $A>B$
 
-(1-) $A &lt B$
+|   |   |   |   |
+|---|---|---|---|
+| $A$ | $A-B$ | $\vert B-C \vert$ | $C$ |
+
+__**(1+)(2+)**__ $A>B$ and $B>C$ => $A>B>C$
+
+|   |   |   |   |
+|---|---|---|---|
+| $A$ | $A-B$ | $ B-C $ | $C$ |
+| $B$ | $\vert A-2B-+C \vert$ | $\vert B-2C \vert$ | $A-C$ |
+
+If $\vert \vert A-B\vert -A \vert \neq 0$ => **CASE ABA0** = **CASE 0A0A**. <br>
+If $\vert \vert A-B\vert -A \vert = 0$ => $(0, 0, 0, 0)$. <br>
+
+__**(1+)(2+)(3+)**__
+__**(1+)(2+)(3+)(4+)**__
+__**(1+)(2-)**__
+
+__**(1-)**__ $A &lt B$
 
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $B-A$ | $\vert B-C \vert$ | $C$ |
 
-(1-)(2+) $A &lt B$ and $B   > C$
+__**(1-)(2+)**__ $A &lt B$ and $B   > C$
 
 |   |   |   |   |
 |---|---|---|---|
@@ -99,7 +113,7 @@ Consider the tuple $(A^1, B^1, C^1, D^1)$. Let $A^1>0$, $B^1>0$, $C^1>0$, $D^1>0
 
 same as **CASE ABAC**. <br> <br>
 
-(1-)(2-) $A &lt B$ and $B &lt C$ => $A \lt B \lt C$
+__**(1-)(2-)**__ $A &lt B$ and $B &lt C$ => $A \lt B \lt C$
 identical to case (1+)(2+), send $A->C$, $B->B$, $C->A$.
 
 
