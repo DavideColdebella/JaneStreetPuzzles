@@ -67,7 +67,7 @@ elements even after many iterations. <br>
 Given a tuple $(A, B, C, D)$ with $A,B,C,D>0$ then the $(0, \vert A-B\vert, \vert B-C\vert, \vert D-A\vert)$ takes the same number of steps to reach $(0, 0, 0, 0)$. The state space can be restricted to the set of all tuples of the kind $(0, A, B, C)$.
 
 ### 4 - rotation invariance
-Given a tuple $(A, B, C, D)$ then its perm $(B, C, D, A)$, $(C, D, A, B)$ and $(D, A, B, C)$ have the same solution.  
+Given a tuple $(A, B, C, D)$ then $(B, C, D, A)$, $(C, D, A, B)$ and $(D, A, B, C)$ have the same solution.  
 
 ### 5 - preserving order
 
@@ -75,6 +75,9 @@ Given a tuple $(A, B, C, D)$ then its perm $(B, C, D, A)$, $(C, D, A, B)$ and $(
 
 
 # APPENDIX
+
+---
+
 **Case AAA0**, $A>0$ <br>
 |   |   |   |   |
 |---|---|---|---|
@@ -84,6 +87,8 @@ Given a tuple $(A, B, C, D)$ then its perm $(B, C, D, A)$, $(C, D, A, B)$ and $(
 | $A$ | $A$ | $A$ | $A$ |
 | $0$ | $0$ | $0$ | $0$ |
 
+---
+
 **Case AA00**, $A>0$ <br>
 |   |   |   |   |
 |---|---|---|---|
@@ -91,6 +96,8 @@ Given a tuple $(A, B, C, D)$ then its perm $(B, C, D, A)$, $(C, D, A, B)$ and $(
 | $0$ | $A$ | $0$ | $A$ |
 | $A$ | $A$ | $A$ | $A$ |
 | $0$ | $0$ | $0$ | $0$ |
+
+---
 
 **Case AABB**, $A>0$, $B>0$, $A\neq B$<br>
 |   |   |   |   |
@@ -100,12 +107,16 @@ Given a tuple $(A, B, C, D)$ then its perm $(B, C, D, A)$, $(C, D, A, B)$ and $(
 | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ |
 | $0$ | $0$ | $0$ | $0$ |
 
+---
+
 **Case A0A0**, $A>0$ <br>
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $0$ | $A$ | $0$ |
 | $A$ | $A$ | $A$ | $A$ |
 | $0$ | $0$ | $0$ | $0$ |
+
+---
 
 **Case ABAB**, $A>0$, $B>0$, $A\neq B$<br>
 |   |   |   |   |
@@ -116,9 +127,13 @@ Given a tuple $(A, B, C, D)$ then its perm $(B, C, D, A)$, $(C, D, A, B)$ and $(
 
 and notice that since $A\neq B => A-B\neq 0$. <br>
 
+---
+
 **Case AAAB**, $A>0$, $B>0$, $A\neq B$ <br>
 If $A>B$ => **CASE AAAB** = **CASE AAA0**. <br>
 If $A &lt B$ => **CASE AAAB** = **CASE 000A**. <br>
+
+---
 
 **Case ABA0**, $A>0$, $B>0$, $A\neq B$ <br>
 |   |   |   |   |
@@ -130,6 +145,8 @@ If $A &lt B$ => **CASE AAAB** = **CASE 000A**. <br>
 If $\vert \vert A-B\vert -A \vert \neq 0$ => **CASE ABA0** = **CASE 0A0A**. <br>
 If $\vert \vert A-B\vert -A \vert = 0$ => $(0, 0, 0, 0)$. <br>
 
+---
+
 **Case 0A0B**, $A>0$, $B>0$, $A\neq B$ <br>
 |   |   |   |   |
 |---|---|---|---|
@@ -137,6 +154,8 @@ If $\vert \vert A-B\vert -A \vert = 0$ => $(0, 0, 0, 0)$. <br>
 | $A$ | $A$ | $B$ | $B$ |
 
 same as **CASE AABB**. <br>
+
+---
 
 **Case AAB0**, $A>0$, $B>0$, $A\neq B$ <br>
 |   |   |   |   |
@@ -183,6 +202,8 @@ Assume $A &lt B$. <br>
 
 same as **CASE ABAB** (it is guaranteed that $A \neq B $) and, if
 $\vert 2A -B\vert = 0$, it is the same as one of the cases discussed above. <br>
+
+---
 
 **Case 00AB**, $A>0$, $B>0$, $A\neq B$ <br>
 
