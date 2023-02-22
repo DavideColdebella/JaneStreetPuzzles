@@ -21,7 +21,7 @@ Consider the set S = {(a, b, c, d) | a, b, c, and d are all integers with 0 <= a
 Jane Street's official solution is elegant and concise and [can be found here](https://www.janestreet.com/puzzles/lesses-more-solution/). Here I'd like to offer a geometric interpretation.
 
 ### First step: the constrains
-A tuple of four elements (x0, x1, x2, x3), each element in the set of natural numbers {0, 1, .., 10<sup>7</sup>}, is the solution of the problem. This means the set of solution contains 10<sup>28</sup> elements and a brute-force solution seems unlikely. <br>
+A tuple of four elements (x0, x1, x2, x3), each element in the set of natural numbers {0, 1, .., 10<sup>7</sup>}, is the solution of the problem. This means that the solution belongs to a set of size 10<sup>28</sup>, so a brute-force solution seems unlikely. <br>
 
 The following code computes the number of steps to reduce a given tuple to the tuple (0, 0, 0, 0) by applying the steps described in the puzzle.
 ```
@@ -38,3 +38,12 @@ def naive(t):
     return c
 ```
 Trying a for loop iterating over each possible value for each element in the tuple quickly proves to be inconclusive.
+
+### Second step: some easy cases
+It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A)
+|Case AAAA|
+|---------|
+| A A A A |
+| 0 0 0 0 |
+
+# APPENDIX
