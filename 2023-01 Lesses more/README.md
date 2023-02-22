@@ -44,8 +44,8 @@ Trying a for loop iterating over each possible value for each element in the tup
 It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A) denoted by **Case AAAA**, A>0 <br>
 |   |   |   |   |
 |---|---|---|---|
-| A | A | A | A | 
-| 0 | 0 | 0 | 0 |
+| $A$ | $A$ | $A$ | $A$ | 
+| $0$ | $0$ | $0$ | $0$ |
 
 2 steps are needed to reach the base case. Let's make another example, **Case 000A**, A>0 <br>
 |   |   |   |   |
