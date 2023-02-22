@@ -64,9 +64,12 @@ A total of 5 steps is needed (to see more cases go to the Appendix at the end). 
 elements even after many iterations. <br>
 
 ### 3 - dropping an element
-Give a tuple $(A, B, C, D)$ with $A,B,C,D>0$ then the $(0, \vert A-B\vert, \vert B-C\vert, \vert D-A\vert)$ takes the same number of steps to reach $(0, 0, 0, 0)$. The state space can be restricted to the set of all tuples of the kind $(0, A, B, C)$.
+Given a tuple $(A, B, C, D)$ with $A,B,C,D>0$ then the $(0, \vert A-B\vert, \vert B-C\vert, \vert D-A\vert)$ takes the same number of steps to reach $(0, 0, 0, 0)$. The state space can be restricted to the set of all tuples of the kind $(0, A, B, C)$.
 
-### 4 - preserving order
+### 4 - rotation invariance
+Given a tuple $(A, B, C, D)$ then its perm $(B, C, D, A)$, $(C, D, A, B)$ and $(D, A, B, C)$ have the same solution.  
+
+### 5 - preserving order
 
 
 
@@ -179,7 +182,70 @@ Assume $A &lt B$. <br>
 | $-A+B$  | $A$ | $-A+B$  | $A$ |
 
 same as **CASE ABAB** (it is guaranteed that $A \neq B $) and, if
-$\vert 2A -B\vert = 0$, it is the same as one of the case discussed above. <br>
+$\vert 2A -B\vert = 0$, it is the same as one of the cases discussed above. <br>
 
-**Case 00AB** <br>
+**Case 00AB**, $A>0$, $B>0$, $A\neq B$ <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $0$ | $0$ | $A$ | $B$ |
+| $0$  | $A$ | $\vert A-B \vert$  | $B$ |
+
+If $\vert A-B\vert = B$ => same as **CASE 0AAB**<br>
+If $\vert A-B\vert = A$ => same as **CASE 0AAB**<br>
+
+Assume $A>B$. <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $0$  | $A$ | $A-B$  | $B$ |
+| $A$  | $B$ | $\vert A-2B \vert$  | $B$ |
+
+If $\vert A-2B\vert = B$ and $A   > 2B$ => $A=3B$ => 7. <br>
+If $\vert A-2B\vert = B$ and $A &lt 2B$ => $A=B$ => impossible. <br>
+Assume $A>B$ and $A>2B$ <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $0$  | $A$ | $A-B$  | $B$ |
+| $A$  | $B$ | $A-2B$  | $B$ |
+| $A-B$  | $\vert A-3B \vert$ | $\vert A-3B \vert$  | $A-B$ |
+
+since $\vert A-3B \vert \neq 0$ always it is the same as **CASE AABB**. 
+Assume $A>B$ and $A &lt 2B$ <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $A$  | $B$ | $-A+2B$  | $B$ |
+| $A-B$  | $A+B$ | $A+3B$  | $A-B$ |
+
+same as **CASE AABB**. 
+
+<br>
+Assume $A &lt B$. <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $0$  | $A$ | $B-A$  | $B$ |
+| $A$  | $\vert B -2A\vert$ | $A$  | $B$ |
+
+Assume $A &lt B$ and $B>2A$ <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $A$  | $B-2A$ | $A$  | $B$ |
+| $\vert B-3A \vert$  | $\vert B-3A \vert$  | $B-A$   | $B-A$ |
+
+same as **CASE AABB**.
+
+Assume $A &lt B$ and $B &lt 2A$ <br>
+
+|   |   |   |   |
+|---|---|---|---|
+| $A$  | $2A-B$ | $A$  | $B$ |
+| $B-A$  | $B-A$  | $B-A$   | $B-A$ |
+
+same as **CASE AAAA**.
+
+
 **Case AABC** <br>
