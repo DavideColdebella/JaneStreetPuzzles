@@ -78,13 +78,13 @@ Consider the tuple $(A^1, B^1, C^1, D^1)$. Let $A^1>0$, $B^1>0$, $C^1>0$, $D^1>0
 | $0$ | $A$ | $B$ | $C$ |
 | $A$ | $\vert B-A \vert$ | $\vert B-C \vert$ | $C$ |
 
-__**(1+)**__ $A>B$
+<b><i>(1)</b></i> $A>B$
 
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $A-B$ | $\vert B-C \vert$ | $C$ |
 
-__**(1+)(2+)**__ $A>B$ and $B>C$ => $A>B>C$
+<b><i>(1+)(2)</b></i> $A>B$ and $B>C$ => $A>B>C$
 
 |   |   |   |   |
 |---|---|---|---|
@@ -100,9 +100,9 @@ If $\vert A-2B+C\vert = B-2C$ and $A-2B+C &lt 0$ => $A=  B-C$ => **CASE AABC**. 
 If $\vert A-2B+C\vert = C-B$ and $A-2B+C   > 0$ => $A=  B+C$ => **CASE AABC**. <br>
 If $\vert A-2B+C\vert = C-B$ and $A-2B+C &lt 0$ => $A=3(B-C)$ => **CASE AABC**. <br>
 
-__**(1+)(2+)(3+)**__ $A>B>C$ and $A-2B+C>0$
+<b><i>(1+)(2+)(3)</b></i> $A>B>C$ and $A-2B+C>0$
 
-__**(1+)(2+)(3+)(4+)**__ $A>B>C$ and $A-2B+C>0$ and $B-2C>0$
+<b><i>(1+)(2+)(3+)(4)</b></i> $A>B>C$ and $A-2B+C>0$ and $B-2C>0$
 
 |   |   |   |   |
 |---|---|---|---|
@@ -111,7 +111,7 @@ __**(1+)(2+)(3+)(4+)**__ $A>B>C$ and $A-2B+C>0$ and $B-2C>0$
 
 to be continued..
 
-__**(1+)(2-)**__ $A>B$ and $B &lt C$
+<b><i>(1+)(2)</b></i> $A>B$ and $B &lt C$
 
 |   |   |   |   |
 |---|---|---|---|
@@ -120,13 +120,13 @@ __**(1+)(2-)**__ $A>B$ and $B &lt C$
 
 same as **CASE ABAB**.
 
-__**(1-)**__ $A &lt B$
+<b><i>(1)</b></i> $A &lt B$
 
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $B-A$ | $\vert B-C \vert$ | $C$ |
 
-__**(1-)(2+)**__ $A &lt B$ and $B   > C$
+<b><i>(1-)(2)</b></i> $A &lt B$ and $B   > C$
 
 |   |   |   |   |
 |---|---|---|---|
@@ -135,8 +135,8 @@ __**(1-)(2+)**__ $A &lt B$ and $B   > C$
 
 same as **CASE ABAC**. <br>
 
-__**(1-)(2-)**__ $A &lt B$ and $B &lt C$ => $A \lt B \lt C$
-identical to case __**(1+)(2+)**__, send $A &rarr; C$, $B &rarr; B$, $C &rarr; A$.
+<b><i>(1-)(2)</b></i> $A &lt B$ and $B &lt C$ => $A \lt B \lt C$
+identical to case <b><i>(1+)(2)</b></i>, send $A &rarr; C$, $B &rarr; B$, $C &rarr; A$.
 
 ## Continued
 Let's continue to develop point <b><i>(1+)(2+)(3+)(4+)</i></b> here. We found that all possible combinations of absolute values terminate except for <b><i>(1+)(2+)(3+)(4+)</b></i> and for <b><i>(1-)(2-)</b></i> which maps back to <b><i>(1+)(2+)</b></i>. These two cases have in common the fact that both are ordered, in the sense that either $A<B<C$ or
