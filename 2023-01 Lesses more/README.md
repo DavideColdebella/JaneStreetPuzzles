@@ -101,12 +101,15 @@ Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes
 | $A$ | $0$ | $A$ | $0$ |
 | $A$ | $A$ | $A$ | $A$ |
 | $0$ | $0$ | $0$ | $0$ |
-**Case ABAB**, $A>0$, $B>0$, $A!=B$<br>
+**Case ABAB**, $A>0$, $B>0$, $A\vneq B$<br>
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $B$ | $A$ | $B$ |
 | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ |
 | $0$ | $0$ | $0$ | $0$ |
+
+and notice that since $A!=B => A-B!=0$
+
 **Case AAAB** <br>
 **Case ABA0** <br>
 **Case AAB0** <br>
