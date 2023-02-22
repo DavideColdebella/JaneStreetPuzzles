@@ -25,7 +25,8 @@ A tuple of four elements (A, B, C, D), each element in the set of natural number
 
 The following code computes the number of steps to reduce a given tuple to the tuple (0, 0, 0, 0) by applying the steps described in the puzzle.
 ```
-def naive(t):
+def naive(t: List[int]) -> int:
+    # t is a mathematical tuple (x0, x1, x2, x3)
     c = 1
     while sum(t)!=0:
         t = [
@@ -40,22 +41,23 @@ def naive(t):
 Trying a for loop iterating over each possible value for each element in the tuple quickly proves to be inconclusive.
 
 ### 2 - some easy cases
-It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A) denoted by **Case AAAA** <br>
+It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A) denoted by **Case AAAA**, A>0 <br>
 |   |   |   |   |
 |---|---|---|---|
-| A | A | A | A | <- after one iteration all elements go to zero.
+| A | A | A | A | 
 | 0 | 0 | 0 | 0 |
 
-A total of 2 steps is needed. Let's make another example, **Case 000A** <br>
+2 steps are needed to reach the base case. Let's make another example, **Case 000A**, A>0 <br>
 |   |   |   |   |
 |---|---|---|---|
 | 0 | 0 | 0 | A |
 | 0 | 0 | A | A |
 | 0 | 0 | A | A |
 | 0 | A | 0 | A |
-| A | A | A | A | <- same as case **Case AAAA**
+| A | A | A | A | 
 | 0 | 0 | 0 | 0 |
 
+Notice that the second last step is the same as **Case AAAA**.
 A total of 5 steps is needed (to see more cases go to the Appendix at the end). Symmetry leads to a quick decay to (0, 0, 0, 0) so the solution will not have two or more equal
 elements even after many iterations. <br>
 
@@ -68,14 +70,36 @@ Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes
 
 
 # APPENDIX
-**Case AAA0**
-**Case AA00**
-**Case AABB**
-**Case A0A0**
-**Case ABAB**
-**Case AAAB**
-**Case ABA0**
-**Case AAB0**
-**Case 0A0B**
-**Case 00AB**
-**Case AABC**
+**Case AAA0**, A>0 <br>
+|   |   |   |   |
+|---|---|---|---|
+| A | A | A | 0 |
+| 0 | 0 | A | A |
+| 0 | A | 0 | A |
+| A | A | A | A |
+| 0 | 0 | 0 | 0 |
+
+**Case AA00**, A>0 <br>
+|   |   |   |   |
+|---|---|---|---|
+| A | A | 0 | 0 |
+| 0 | A | 0 | A |
+| A | A | A | A |
+| 0 | 0 | 0 | 0 |
+
+**Case AABB**, A>0, B>0, A!=B<br>
+|   |   |   |   |
+|---|---|---|---|
+| A | A | B | B |
+| 0 | |A-B| | 0 | |A-B| |
+| A | A | A | A |
+| 0 | 0 | 0 | 0 |
+
+**Case A0A0** <br>
+**Case ABAB** <br>
+**Case AAAB** <br>
+**Case ABA0** <br>
+**Case AAB0** <br>
+**Case 0A0B** <br>
+**Case 00AB** <br>
+**Case AABC** <br>
