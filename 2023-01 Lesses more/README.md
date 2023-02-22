@@ -47,7 +47,6 @@ It can be proven that any tuple having some sort of symmetry quickly decays to t
 | 0 | 0 | 0 | 0 |
 
 A total of 2 steps is needed <br><br>
-
 Let's make another example, **Case 000A** <br>
 |   |   |   |   |
 |---|---|---|---|
