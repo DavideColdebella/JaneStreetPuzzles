@@ -76,7 +76,7 @@ Consider the tuple $(A^1, B^1, C^1, D^1)$. Let $A^1>0$, $B^1>0$, $C^1>0$, $D^1>0
 |   |   |   |   |
 |---|---|---|---|
 | $0$ | $A$ | $B$ | $C$ |
-| $A$ | $\vert B-A \vert$ | $\vert C-B \vert$ | $C$ |
+| $A$ | $\vert B-A \vert$ | $\vert B-C \vert$ | $C$ |
 
 __**(1+)**__ $A>B$
 
@@ -89,14 +89,36 @@ __**(1+)(2+)**__ $A>B$ and $B>C$ => $A>B>C$
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $A-B$ | $ B-C $ | $C$ |
-| $B$ | $\vert A-2B-+C \vert$ | $\vert B-2C \vert$ | $A-C$ |
+| $B$ | $\vert A-2B+C \vert$ | $\vert B-2C \vert$ | $A-C$ |
 
-If $\vert \vert A-B\vert -A \vert \neq 0$ => **CASE ABA0** = **CASE 0A0A**. <br>
-If $\vert \vert A-B\vert -A \vert = 0$ => $(0, 0, 0, 0)$. <br>
+If $\vert A-2B+C\vert = B$ and $A-2B+C   > 0$ => $A=3B+C$ => **CASE AABC**. <br>
+If $\vert A-2B+C\vert = B$ and $A-2B+C &lt 0$ => $A= B-C$ => **CASE AABC**. <br>
+If $\vert A-2B+C\vert = A-C$ and $A-2B+C   > 0$ => $C=B$ => impossible. <br>
+If $\vert A-2B+C\vert = A-C$ and $A-2B+C &lt 0$ => $A=B$ => impossible. <br>
+If $\vert A-2B+C\vert = B-2C$ and $A-2B+C   > 0$ => $A=3(B-C)$ => **CASE AABC**. <br>
+If $\vert A-2B+C\vert = B-2C$ and $A-2B+C &lt 0$ => $A=  B-C$ => **CASE AABC**. <br>
+If $\vert A-2B+C\vert = C-B$ and $A-2B+C   > 0$ => $A=  B+C$ => **CASE AABC**. <br>
+If $\vert A-2B+C\vert = C-B$ and $A-2B+C &lt 0$ => $A=3(B-C)$ => **CASE AABC**. <br>
 
-__**(1+)(2+)(3+)**__
-__**(1+)(2+)(3+)(4+)**__
-__**(1+)(2-)**__
+__**(1+)(2+)(3+)**__ $A>B>C$ and $A-2B+C>0$
+
+__**(1+)(2+)(3+)(4+)**__ $A>B>C$ and $A-2B+C>0$ and $B-2C>0$
+
+|   |   |   |   |
+|---|---|---|---|
+| $B$ | $ A-2B+C $ | $B-2C $ | $A-C$ |
+| $\vert A-3B+C \vert$ | $\vert A-3B+3C \vert$ | $\vert B-A-C \vert$ | $\vert A-C-B \vert$ |
+
+to be continued..
+
+__**(1+)(2-)**__ $A>B$ and $B &lt C$
+
+|   |   |   |   |
+|---|---|---|---|
+| $A$ | $A-B$ | $C-B$ | $C$ |
+| $B$ | $\vert A-C \vert$ | $B$ | $A-C$ |
+
+same as **CASE ABAB**.
 
 __**(1-)**__ $A &lt B$
 
@@ -111,12 +133,14 @@ __**(1-)(2+)**__ $A &lt B$ and $B   > C$
 | $A$ | $B-A$ | $B-C$ | $C$ |
 | $\vert B-2A \vert $ | $\vert A-C \vert$ | $\vert B-2C\vert$ | $\vert A - C \vert$ |
 
-same as **CASE ABAC**. <br> <br>
+same as **CASE ABAC**. <br>
 
 __**(1-)(2-)**__ $A &lt B$ and $B &lt C$ => $A \lt B \lt C$
-identical to case (1+)(2+), send $A &rarr C$, $B &rarr B$, $C &rarr A$.
+identical to case __**(1+)(2+)**__, send $A &rarr C$, $B &rarr B$, $C &rarr A$.
 
-
+## Continued
+Let's continue to develop point <b><i>(1+)(2+)(3+)(4+)</i></b> here. We found that all possible combinations of absolute values terminate except for <b><i>(1+)(2+)(3+)(4+)</b></i> and for <b><i>(1-)(2-)</b></i> which maps back to <b><i>(1+)(2+)</b></i>. These two cases have in common the fact that both are ordered, in the sense that either $A<B<C$ or
+$A &lt B &lt C$.
 
 # APPENDIX
 
