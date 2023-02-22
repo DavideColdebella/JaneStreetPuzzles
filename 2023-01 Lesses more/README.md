@@ -20,8 +20,8 @@ Consider the set S = {(a, b, c, d) | a, b, c, and d are all integers with 0 <= a
 ## SOLUTION
 Jane Street's official solution is elegant and concise and [can be found here](https://www.janestreet.com/puzzles/lesses-more-solution/). Here I'd like to offer a geometric interpretation.
 
-### First step: the constrains
-A tuple of four elements (x0, x1, x2, x3), each element in the set of natural numbers {0, 1, .., 10<sup>7</sup>}, is the solution of the problem. This means that the solution belongs to a set of size 10<sup>28</sup>, so a brute-force solution seems unlikely. <br>
+### 1 - the constrains
+A tuple of four elements (A, B, C, D), each element in the set of natural numbers {0, 1, .., 10<sup>7</sup>}, is the solution of the problem. This means that the solution belongs to a set of size 10<sup>28</sup>, so a brute-force solution seems unlikely. <br>
 
 The following code computes the number of steps to reduce a given tuple to the tuple (0, 0, 0, 0) by applying the steps described in the puzzle.
 ```
@@ -39,15 +39,14 @@ def naive(t):
 ```
 Trying a for loop iterating over each possible value for each element in the tuple quickly proves to be inconclusive.
 
-### Second step: some easy cases
+### 2 - some easy cases
 It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A) denoted by **Case AAAA** <br>
 |   |   |   |   |
 |---|---|---|---|
 | A | A | A | A | <- after one iteration all elements go to zero.
 | 0 | 0 | 0 | 0 |
 
-A total of 2 steps is needed <br><br>
-Let's make another example, **Case 000A** <br>
+A total of 2 steps is needed. Let's make another example, **Case 000A** <br>
 |   |   |   |   |
 |---|---|---|---|
 | 0 | 0 | 0 | A |
@@ -57,9 +56,26 @@ Let's make another example, **Case 000A** <br>
 | A | A | A | A | <- same as case **Case AAAA**
 | 0 | 0 | 0 | 0 |
 
-A total of 5 steps is needed <br>
-To see more cases go to the Appendix at the end of the file.<br>
+A total of 5 steps is needed (to see more cases go to the Appendix at the end). Symmetry leads to a quick decay to (0, 0, 0, 0) so the solution will not have two or more equal
+elements even after many iterations. <br>
+
+### 3 - dropping an element
+Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes the same number of steps to reach (0, 0, 0, 0). The state space can be restricted to the set of all tuples of the kind (0, A, B, C).
+
+### 4 - preserving order
+
 
 
 
 # APPENDIX
+**Case AAA0**
+**Case AA00**
+**Case AABB**
+**Case A0A0**
+**Case ABAB**
+**Case AAAB**
+**Case ABA0**
+**Case AAB0**
+**Case 0A0B**
+**Case 00AB**
+**Case AABC**
