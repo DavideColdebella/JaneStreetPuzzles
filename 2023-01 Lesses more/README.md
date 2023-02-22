@@ -40,12 +40,25 @@ def naive(t):
 Trying a for loop iterating over each possible value for each element in the tuple quickly proves to be inconclusive.
 
 ### Second step: some easy cases
-It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A)
-<br>
-**Case AAAA** <br>
+It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A) denoted by **Case AAAA** <br>
 |   |   |   |   |
 |---|---|---|---|
-| A | A | A | A |
+| A | A | A | A | <- after one iteration all elements go to zero.
 | 0 | 0 | 0 | 0 |
+A total of 2 steps is needed <br><br>
+
+Let's make another example, **Case 000A** <br>
+|   |   |   |   |
+|---|---|---|---|
+| 0 | 0 | 0 | A |
+| 0 | 0 | A | A |
+| 0 | 0 | A | A |
+| 0 | A | 0 | A |
+| A | A | A | A | <- same as case **Case AAAA**
+| 0 | 0 | 0 | 0 |
+A total of 5 steps is needed <br>
+To see more cases go to the Appendix at the end of the file.<br>
+
+
 
 # APPENDIX
