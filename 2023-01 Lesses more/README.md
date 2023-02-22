@@ -41,21 +41,21 @@ def naive(t: List[int]) -> int:
 Trying a for loop iterating over each possible value for each element in the tuple quickly proves to be inconclusive.
 
 ### 2 - some easy cases
-It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A) denoted by **Case AAAA**, A>0 <br>
+It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A) denoted by **Case AAAA**, $A>0$ <br>
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $A$ | $A$ | $A$ | 
 | $0$ | $0$ | $0$ | $0$ |
 
-2 steps are needed to reach the base case. Let's make another example, **Case 000A**, A>0 <br>
+2 steps are needed to reach the base case. Let's make another example, **Case 000A**, $A>0$ <br>
 |   |   |   |   |
 |---|---|---|---|
-| 0 | 0 | 0 | A |
-| 0 | 0 | A | A |
-| 0 | 0 | A | A |
-| 0 | A | 0 | A |
-| A | A | A | A | 
-| 0 | 0 | 0 | 0 |
+| $0$ | $0$ | $0$ | $A$ |
+| $0$ | $0$ | $A$ | $A$ |
+| $0$ | $0$ | $A$ | $A$ |
+| $0$ | $A$ | $0$ | $A$ |
+| $A$ | $A$ | $A$ | $A$ | 
+| $0$ | $0$ | $0$ | $0$ |
 
 Notice that the second last step is the same as **Case AAAA**.
 A total of 5 steps is needed (to see more cases go to the Appendix at the end). Symmetry leads to a quick decay to (0, 0, 0, 0) so the solution will not have two or more equal
@@ -70,30 +70,30 @@ Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes
 
 
 # APPENDIX
-**Case AAA0**, A>0 <br>
+**Case AAA0**, $A>0$ <br>
 |   |   |   |   |
 |---|---|---|---|
-| A | A | A | 0 |
-| 0 | 0 | A | A |
-| 0 | A | 0 | A |
-| A | A | A | A |
-| 0 | 0 | 0 | 0 |
+| $A$ | $A$ | $A$ | $0$ |
+| $0$ | $0$ | $A$ | $A$ |
+| $0$ | $A$ | $0$ | $A$ |
+| $A$ | $A$ | $A$ | $A$ |
+| $0$ | $0$ | $0$ | $0$ |
 
-**Case AA00**, A>0 <br>
+**Case AA00**, $A>0$ <br>
 |   |   |   |   |
 |---|---|---|---|
-| A | A | 0 | 0 |
-| 0 | A | 0 | A |
-| A | A | A | A |
-| 0 | 0 | 0 | 0 |
+| $A$ | $A$ | $0$ | $0$ |
+| $0$ | $A$ | $0$ | $A$ |
+| $A$ | $A$ | $A$ | $A$ |
+| $0$ | $0$ | $0$ | $0$ |
 
-**Case AABB**, A>0, B>0, A!=B<br>
+**Case AABB**, $A>0$, $B>0$, $A!=B$<br>
 |   |   |   |   |
 |---|---|---|---|
-| A | A | B | B |
-| 0 | $\vert A-B\vert$ | 0 | $\vert A-B\vert$ |
-| A | A | A | A |
-| 0 | 0 | 0 | 0 |
+| $A$ | $A$ | $B$ | $B$ |
+| $0$ | $\vert A-B\vert$ | $0$ | $\vert A-B\vert$ |
+| $A$ | $A$ | $A$ | $A$ |
+| $0$ | $0$ | $0$ | $0$ |
 
 **Case A0A0** <br>
 **Case ABAB** <br>
