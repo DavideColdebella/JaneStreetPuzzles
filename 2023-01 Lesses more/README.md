@@ -78,8 +78,12 @@ Consider the tuple $(A^1, B^1, C^1, D^1)$. Let $A^1>0$, $B^1>0$, $C^1>0$, $D^1>0
 | $0$ | $A$ | $B$ | $C$ |
 | $A$ | $\vert B-A \vert$ | $\vert C-B \vert$ | $C$ |
 
-1. + $A>B$
-1. - $A &lt B$
+1. (+) $A>B$
+
+
+<br>
+
+1. (-) $A &lt B$
 
 
 
