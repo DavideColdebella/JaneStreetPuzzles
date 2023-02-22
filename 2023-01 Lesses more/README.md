@@ -190,9 +190,8 @@ Assume $A>B$, $A-2B &lt 0$ <br>
 | $A-B$ | $-A+2B$ | $A-B$ | $A$ |
 | $\vert 2A - 3B\vert$ | $\vert 2A - 3B\vert$ | $B$ | $B$ |
 
-same as **CASE AABB** since $\vert 2A-3B \vert \neq B$ always.
+same as **CASE AABB** since $\vert 2A-3B \vert \neq B$ always. <br>
 
-<br>
 Assume $A &lt B$. <br>
 
 |   |   |   |   |
