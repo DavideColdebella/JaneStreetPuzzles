@@ -92,11 +92,21 @@ Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes
 |---|---|---|---|
 | $A$ | $A$ | $B$ | $B$ |
 | $0$ | $\vert A-B\vert$ | $0$ | $\vert A-B\vert$ |
-| $A$ | $A$ | $A$ | $A$ |
+| $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ |
 | $0$ | $0$ | $0$ | $0$ |
 
-**Case A0A0** <br>
-**Case ABAB** <br>
+**Case A0A0**, $A>0$ <br>
+|   |   |   |   |
+|---|---|---|---|
+| $A$ | $0$ | $A$ | $0$ |
+| $A$ | $A$ | $A$ | $A$ |
+| $0$ | $0$ | $0$ | $0$ |
+**Case ABAB**, $A>0$, $B>0$, $A!=B$<br>
+|   |   |   |   |
+|---|---|---|---|
+| $A$ | $B$ | $A$ | $B$ |
+| $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ |
+| $0$ | $0$ | $0$ | $0$ |
 **Case AAAB** <br>
 **Case ABA0** <br>
 **Case AAB0** <br>
