@@ -21,9 +21,9 @@ Consider the set S = {(a, b, c, d) | a, b, c, and d are all integers with 0 <= a
 Jane Street's official solution is elegant and concise and [can be found here](https://www.janestreet.com/puzzles/lesses-more-solution/). Here I'd like to offer a geometric interpretation.
 
 ### 1 - the constrains
-A tuple of four elements (A, B, C, D), each element in the set of natural numbers {0, 1, .., 10<sup>7</sup>}, is the solution of the problem. This means that the solution belongs to a set of size 10<sup>28</sup>, so a brute-force solution seems unlikely. <br>
+A tuple of four elements $(A, B, C, D)$, each element in the set of natural numbers {0, 1, .., 10<sup>7</sup>}, is the solution of the problem. This means that the solution belongs to a set of size 10<sup>28</sup>, so a brute-force solution seems unlikely. <br>
 
-The following code computes the number of steps to reduce a given tuple to the tuple (0, 0, 0, 0) by applying the steps described in the puzzle.
+The following code computes the number of steps to reduce a given tuple to the tuple $(0, 0, 0, 0)$ by applying the steps described in the puzzle.
 ```
 def naive(t: List[int]) -> int:
     # t is a mathematical tuple (x0, x1, x2, x3)
@@ -41,7 +41,7 @@ def naive(t: List[int]) -> int:
 Trying a for loop iterating over each possible value for each element in the tuple quickly proves to be inconclusive.
 
 ### 2 - some easy cases
-It can be proven that any tuple having some sort of symmetry quickly decays to the tuple (0, 0, 0, 0). As an example consider the tuple (A, A, A, A) denoted by **Case AAAA**, $A>0$ <br>
+It can be proven that any tuple having some sort of symmetry quickly decays to the tuple $(0, 0, 0, 0)$. As an example consider the tuple $(A, A, A, A)$ denoted by **Case AAAA**, $A>0$ <br>
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $A$ | $A$ | $A$ | 
@@ -58,11 +58,11 @@ It can be proven that any tuple having some sort of symmetry quickly decays to t
 | $0$ | $0$ | $0$ | $0$ |
 
 Notice that the second last step is the same as **Case AAAA**.
-A total of 5 steps is needed (to see more cases go to the Appendix at the end). Symmetry leads to a quick decay to (0, 0, 0, 0) so the solution will not have two or more equal
+A total of 5 steps is needed (to see more cases go to the Appendix at the end). Symmetry leads to a quick decay to $(0, 0, 0, 0)$ so the solution will not have two or more equal
 elements even after many iterations. <br>
 
 ### 3 - dropping an element
-Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes the same number of steps to reach (0, 0, 0, 0). The state space can be restricted to the set of all tuples of the kind (0, A, B, C).
+Give a tuple $(A, B, C, D)$ with $A,B,C,D>0$ then the $(0, \vert A-B\vert, \vert B-C\vert, \vert D-A\vert)$ takes the same number of steps to reach $(0, 0, 0, 0)$. The state space can be restricted to the set of all tuples of the kind $(0, A, B, C)$.
 
 ### 4 - preserving order
 
@@ -87,7 +87,7 @@ Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes
 | $A$ | $A$ | $A$ | $A$ |
 | $0$ | $0$ | $0$ | $0$ |
 
-**Case AABB**, $A>0$, $B>0$, $A!=B$<br>
+**Case AABB**, $A>0$, $B>0$, $A\neq B$<br>
 |   |   |   |   |
 |---|---|---|---|
 | $A$ | $A$ | $B$ | $B$ |
@@ -109,7 +109,7 @@ Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes
 | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ |
 | $0$ | $0$ | $0$ | $0$ |
 
-and notice that since $A!=B => A-B!=0$
+and notice that since $A\neq B => A-B\neq 0$
 
 **Case AAAB** <br>
 **Case ABA0** <br>
