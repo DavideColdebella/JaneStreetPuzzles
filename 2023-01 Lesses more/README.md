@@ -111,10 +111,15 @@ Give a tuple $(A, B, C, D)$ with $A,B,C,D>0$ then the $(0, \vert A-B\vert, \vert
 | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ | $\vert A-B\vert$ |
 | $0$ | $0$ | $0$ | $0$ |
 
-and notice that since $A\neq B => A-B\neq 0$
+and notice that since $A\neq B => A-B\neq 0$. <br>
 
-**Case AAAB** <br>
-**Case ABA0** <br>
+**Case AAAB**, $A>0$, $B>0$, $A\neq B$ <br>
+If $A>B$ then **CASE AAAB** == **CASE AAA0** <br>
+If $A<B$ then **CASE AAAB** == **CASE 000A** <br>
+
+**Case ABA0**, $A>0$, $B>0$, $A\neq B$ <br>
+
+
 **Case AAB0** <br>
 **Case 0A0B** <br>
 **Case 00AB** <br>
