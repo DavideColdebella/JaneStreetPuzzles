@@ -136,7 +136,7 @@ __**(1-)(2+)**__ $A &lt B$ and $B   > C$
 same as **CASE ABAC**. <br>
 
 __**(1-)(2-)**__ $A &lt B$ and $B &lt C$ => $A \lt B \lt C$
-identical to case __**(1+)(2+)**__, send $A &rarr C$, $B &rarr B$, $C &rarr A$.
+identical to case __**(1+)(2+)**__, send $A &rarr; C$, $B &rarr; B$, $C &rarr; A$.
 
 ## Continued
 Let's continue to develop point <b><i>(1+)(2+)(3+)(4+)</i></b> here. We found that all possible combinations of absolute values terminate except for <b><i>(1+)(2+)(3+)(4+)</b></i> and for <b><i>(1-)(2-)</b></i> which maps back to <b><i>(1+)(2+)</b></i>. These two cases have in common the fact that both are ordered, in the sense that either $A<B<C$ or
