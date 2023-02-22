@@ -114,7 +114,7 @@ __**(1-)(2+)**__ $A &lt B$ and $B   > C$
 same as **CASE ABAC**. <br> <br>
 
 __**(1-)(2-)**__ $A &lt B$ and $B &lt C$ => $A \lt B \lt C$
-identical to case (1+)(2+), send $A->C$, $B->B$, $C->A$.
+identical to case (1+)(2+), send $A &rarr C$, $B &rarr B$, $C &rarr A$.
 
 
 
