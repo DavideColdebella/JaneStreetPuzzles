@@ -172,6 +172,7 @@ same as **CASE AABB** since $\vert 2A-3B \vert \neq B$ always.
 
 <br>
 Assume $A &lt B$. <br>
+
 |   |   |   |   |
 |---|---|---|---|
 | $0$ | $-A+B$ | $B$ | $A$ |
