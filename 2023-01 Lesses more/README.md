@@ -91,7 +91,7 @@ Give a tuple (A, B, C, D) with A,B,C,D>0 then the (0, |A-B|, |B-C|, |D-A|) takes
 |   |   |   |   |
 |---|---|---|---|
 | A | A | B | B |
-| 0 | |A-B| | 0 | |A-B| |
+| 0 | \vert A-B\vert | 0 | \vert A-B\vert |
 | A | A | A | A |
 | 0 | 0 | 0 | 0 |
 
