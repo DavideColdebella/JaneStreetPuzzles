@@ -78,13 +78,29 @@ Consider the tuple $(A^1, B^1, C^1, D^1)$. Let $A^1>0$, $B^1>0$, $C^1>0$, $D^1>0
 | $0$ | $A$ | $B$ | $C$ |
 | $A$ | $\vert B-A \vert$ | $\vert C-B \vert$ | $C$ |
 
-1. (+) $A>B$
+(1+) $A>B$
+(1+)(2+)
+(1+)(2+)(3+)
+(1+)(2+)(3+)(4+)
+(1+)(2-)
 
+(1-) $A &lt B$
 
-<br>
+|   |   |   |   |
+|---|---|---|---|
+| $A$ | $B-A$ | $\vert B-C \vert$ | $C$ |
 
-1. (-) $A &lt B$
+(1-)(2+) $A &lt B$ and $B   > C$
 
+|   |   |   |   |
+|---|---|---|---|
+| $A$ | $B-A$ | $B-C$ | $C$ |
+| $\vert B-2A \vert $ | $\vert A-C \vert$ | $\vert B-2C\vert$ | $\vert A - C \vert$ |
+
+same as **CASE ABAC**. <br> <br>
+
+(1-)(2-) $A &lt B$ and $B &lt C$ => $A \lt B \lt C$
+identical to case (1+)(2+), send $A->C$, $B->B$, $C->A$.
 
 
 
