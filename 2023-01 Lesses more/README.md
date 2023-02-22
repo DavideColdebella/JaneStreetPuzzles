@@ -115,7 +115,7 @@ and notice that since $A\neq B => A-B\neq 0$. <br>
 
 **Case AAAB**, $A>0$, $B>0$, $A\neq B$ <br>
 If $A>B$ => **CASE AAAB** = **CASE AAA0** <br>
-If $A<B$ => **CASE AAAB** = **CASE 000A** <br>
+If  => **CASE AAAB** = **CASE 000A** <br>
 
 **Case ABA0**, $A>0$, $B>0$, $A\neq B$ <br>
 |   |   |   |   |
