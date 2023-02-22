@@ -19,3 +19,22 @@ Consider the set S = {(a, b, c, d) | a, b, c, and d are all integers with 0 <= a
 
 ## SOLUTION
 Jane Street's official solution is elegant and concise and [can be found here](https://www.janestreet.com/puzzles/lesses-more-solution/). Here I'd like to offer a geometric interpretation.
+
+##### First step: the constrains
+A tuple of four elements (x0, x1, x2, x3), each element in the set of natural numbers {0, 1, .., 10<sup>7</sup>}, is the solution of the problem. This means the set of solution contains 10<sup>28</sup> elements and a brute-force solution seems unlikely. <br>
+
+The following code computes the number of steps to reduce a given tuple to the tuple (0, 0, 0, 0) by applying the steps described in the puzzle.
+```
+def naive(t):
+    c = 1
+    while sum(t)!=0:
+        t = [
+            abs(t[1] - t[0]), 
+            abs(t[2] - t[1]), 
+            abs(t[3] - t[2]), 
+            abs(t[0] - t[3])
+        ]
+        c+=1
+    return c
+```
+Trying a for loop iterating over each possible value for each element in the tuple quickly proves to be inconclusive.
