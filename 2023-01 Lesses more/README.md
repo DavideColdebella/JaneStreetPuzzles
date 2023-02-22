@@ -45,6 +45,7 @@ It can be proven that any tuple having some sort of symmetry quickly decays to t
 |---|---|---|---|
 | A | A | A | A | <- after one iteration all elements go to zero.
 | 0 | 0 | 0 | 0 |
+
 A total of 2 steps is needed <br><br>
 
 Let's make another example, **Case 000A** <br>
@@ -56,6 +57,7 @@ Let's make another example, **Case 000A** <br>
 | 0 | A | 0 | A |
 | A | A | A | A | <- same as case **Case AAAA**
 | 0 | 0 | 0 | 0 |
+
 A total of 5 steps is needed <br>
 To see more cases go to the Appendix at the end of the file.<br>
 
